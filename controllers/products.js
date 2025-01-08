@@ -22,7 +22,7 @@ const getAllProducts = async (req , res) => {
         queryObject.name = { $regex: name, $options: "i" };
     }
 
-    console.log(queryObject);    
+    // console.log(queryObject);    
 
     const products = await Product.find(queryObject)
     // const products = await Product.find(req.query)
